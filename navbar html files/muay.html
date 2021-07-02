@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GYM</title>
+</head>
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: rgb(19, 18, 18);
+        color: whitesmoke;
+        margin: 0px;
+        padding: 0px;
+    }
+    /*navbar section start from here*/
+    
+    .nav-bar {
+        border-top: 1px solid rgb(29, 29, 29);
+        border-bottom: 1px solid rgb(26, 25, 25);
+        height: 50px;
+        background-color: rgb(25, 26, 25);
+        position: fixed;
+        font-size: 20px;
+        z-index: 10;
+        padding-left: 20px;
+        margin: -18px;
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        letter-spacing: 2px;
+        align-items: center;
+    }
+    
+    .nav-bar a {
+        color: whitesmoke;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 16px;
+        margin-right: 30px;
+        padding-top: 5px;
+    }
+    
+    .nav-bar a:hover {
+        color: rgb(201, 19, 19);
+    }
+    /*sub-nav content start from here*/
+    
+    .subnav {
+        float: left;
+        overflow: hidden;
+    }
+    
+    .subnavbtn {
+        border: none;
+        font-size: 16px;
+        outline: none;
+        color: whitesmoke;
+        background-color: inherit;
+        font-family: inherit;
+        margin-right: 30px;
+        font-weight: 600;
+        letter-spacing: 2px;
+    }
+    
+    .subnavbtn:hover {
+        color: rgb(201, 19, 19);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    .subnav-content {
+        display: none;
+        position: absolute;
+        left: 792px;
+        width: 100%;
+        z-index: 1;
+        margin-top: 0px;
+    }
+    
+    .subnav-content a {
+        float: left;
+        padding-left: 10px;
+        color: whitesmoke;
+        text-decoration: none;
+        font-size: 16px;
+        width: 120px;
+        background-color: rgb(44, 43, 43);
+        border-radius: 10px;
+        border-top: 2px solid rgb(29, 28, 28);
+    }
+    
+    .subnav-content a:hover {
+        color: rgb(201, 19, 19);
+    }
+    
+    .subnav:hover>.subnav-content {
+        display: flex;
+        flex-direction: column;
+        padding-top: 15px;
+        row-gap: 5px;
+    }
+    /*MUAY section start from here*/
+    
+    .muay-section h1 {
+        background-image: url(/image/image1.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        width: 100%;
+        font-size: 25px;
+        font-weight: 500;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        text-align: center;
+        padding-top: 120px;
+        padding-bottom: 30px;
+        text-decoration: overline;
+        text-decoration-color: rgb(201, 19, 19);
+        text-decoration-thickness: 3px;
+    }
+    
+    .muay-section h2 {
+        margin-left: 100px;
+        margin-top: 30px;
+        font-weight: 400;
+        font-size: 20px;
+        width: 1100px;
+    }
+    
+    .muay-section h3 {
+        margin-left: 100px;
+        font-size: 25px;
+    }
+    
+    .question-section {
+        margin-left: 80px;
+        font-size: 18px;
+        font-weight: 500;
+    }
+    
+    .question-section li {
+        margin-bottom: 10px;
+    }
+    
+    .image-section {
+        display: flex;
+        flex-direction: row;
+        column-gap: 20px;
+        justify-content: center;
+        padding-top: 30px;
+    }
+    
+    .image-section img {
+        height: 150px;
+        width: 175px;
+    }
+    
+    .join-us-section {
+        margin: 80px 0px;
+        background-color: rgb(34, 31, 31);
+        margin-left: 100px;
+        height: 130px;
+        width: 85%;
+        position: relative;
+    }
+    
+    .join-us-section p {
+        height: 80px;
+        padding-top: 35px;
+        padding-left: 20px;
+        font-size: 18px;
+    }
+    
+    .span {
+        margin-top: 10px;
+    }
+    
+    .btn {
+        position: absolute;
+        right: 70px;
+        top: 45px;
+        height: 40px;
+        width: 100px;
+        background-color: rgb(201, 19, 19);
+        border: none;
+        border-radius: 8px;
+    }
+    
+    .btn a {
+        font-size: 16px;
+        text-decoration: none;
+        font-weight: 600;
+        color: whitesmoke;
+    }
+    /*footer section start from here*/
+    
+    .footer {
+        margin-top: 100px;
+        height: 19vw;
+    }
+    
+    .contact-section {
+        color: whitesmoke;
+        display: flex;
+        flex-direction: row;
+        background-color: rgb(34, 31, 31);
+        border-top: 1px solid rgb(22, 21, 21);
+        border-bottom: 1px solid rgb(15, 15, 15);
+        column-gap: 8rem;
+        justify-content: center;
+        height: 24vw;
+    }
+    
+    h4 {
+        color: whitesmoke;
+        margin-bottom: 20px;
+        font-size: 20px;
+        font-weight: 400;
+    }
+    
+    .section-one {
+        margin-top: 50px;
+    }
+    
+    #fit {
+        color: rgb(201, 19, 19);
+    }
+    
+    .section-one p {
+        width: 300px;
+        line-height: 30px;
+    }
+    
+    .section-two {
+        display: flex;
+        flex-direction: column;
+        margin-top: 50px;
+    }
+    
+    .section-two a {
+        color: whitesmoke;
+        text-decoration: none;
+        line-height: 30px;
+    }
+    
+    .section-three {
+        margin-top: 50px;
+    }
+    
+    .section-three p,
+    .section-four p {
+        line-height: 30px;
+    }
+    
+    .section-four {
+        margin-top: 50px;
+    }
+    
+    .section-four h5 {
+        margin-top: 35px;
+        font-size: 18px;
+        color: whitesmoke;
+        font-weight: 400;
+    }
+    
+    .section-four img {
+        height: 30px;
+        width: 30px;
+        margin-left: 10px;
+        border: none;
+    }
+    
+    .section-four div {
+        margin-left: 10px;
+        margin-top: -15px;
+    }
+    
+    .footer-section h2 {
+        padding-left: 90px;
+        font-size: 14px;
+        color: whitesmoke;
+        font-weight: 300;
+        margin-top: 5px;
+        text-align: center;
+    }
+</style>
+
+<body>
+
+    <div class="nav-bar">
+
+        <a href="/index.html">HOME</a>
+        <div class="subnav">
+            <button class="subnavbtn">TRAINING & CLASSES </button>
+            <div class="subnav-content">
+                <a href="/navbar html files/gym.html">GYM</a>
+                <a href="/navbar html files/cycling.html">CYCLING</a>
+                <a href="/navbar html files/fitness.html">FITNESS</a>
+                <a href="/navbar html files/muay.html">MUAY THAI</a>
+            </div>
+        </div>
+        <a href="/navbar html files/aboutus.html">ABOUT US</a>
+        <a href="/gallery html files/gallery.html">GALLERY</a>
+        <a href="/navbar html files/form.html">CONTACT</a>
+
+
+    </div>
+
+    <div class="muay-section">
+        <h1>MUAY THAI</h1>
+        <h2>MUAY THAI WIDELY REGARDED AS THE MOST LETHAL FORM OF STRIKING ORIGINATED FROM THAILAND. IT IS ALSO CALLED THE ART OF 8 LIMBS. WHETHER YOU WANT TO BE A PROFESSIONAL FIGHTER, LOSE WEIGHT, GET FIT OR JUST LEARN TO DEFEND YOURSELF. GYMKHANA IS THE
+            ONLY PLACE WHICH TEACHES YOU REAL AUTHENTIC MUAY THAI.
+        </h2>
+        <h3>Why Muay Thai at Fitness Club?</h3>
+        <ul class="question-section">
+            <li>Get trained by experienced and professional International and Domestic Trainers</li>
+            <li>World Class Facility </li>
+            <li>State of the art equipment</li>
+            <li>Olympic size boxing ring</li>
+            <li>All classes run by 3 trainers </li>
+            <li>Fully Equipped Muay Thai Facility</li>
+        </ul>
+    </div>
+    <div class="image-section">
+        <img src="/collection/muaypic1.jpeg">
+        <img src="/collection/muaypic2.jpg">
+        <img src="/collection/muaypic3.jpg">
+        <img src="/collection/muaypic4.jpeg">
+        <img src="/collection/muaypic5.jpg">
+        <img src="/collection/muaypic7.jpg">
+    </div>
+    <div class="join-us-section">
+        <p>ARE YOU READY? <br/> <span class="span"> DON’T WAIT, BOOK YOUR SPOT AND START TRAINING TODAY!</span>
+            <button class="btn"><a href="/navbar html files/form.html">Join Us</a></button></p>
+    </div>
+    <footer class="footer">
+        <div class="contact-section">
+            <div class="section-one">
+                <h4><span id="fit">FITNESS</span> CLUB</h4>
+                <p>Fitness Club is Nepal's first and only fully equipped functional fitness gym. A one stop solution to all fitness needs with a world class facility​, state of the art equipment and highly experienced and certified instructors.</p>
+            </div>
+            <div class="section-two">
+                <h4>NAVIGATION</h4>
+                <a href="#training">Training & Classes</a>
+                <a href="#coache">Our Coaches</a>
+                <a href="#slideshow">Gallery</a>
+                <a href="#">Join Us</a>
+            </div>
+            <div class="section-three">
+                <h4>CONTACT INFORMATION</h4>
+                <p>Maitidevi, KTM</p>
+                <p>G-mail: prakash.bohara.161</p>
+                <p>Tel: 9814649537</p>
+            </div>
+            <div class="section-four">
+                <h4>WE ARE OPEN</h4>
+                <p>Sun-Fri: 6:00-20:30</p>
+                <p>Sat: 9:00-12:00</p>
+                <h5>CONNECT WITH US</h5>
+                <div>
+                    <a href="#"><img src="/image/facebook.png"></a>
+                    <a href="#"><img src="/image/instagram.png"></a>
+                    <a href="#"><img src="/image/linkedin.png"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-section">
+            <h2>© 2021 All rights reserved by Fitness Club.</h2>
+
+        </div>
+    </footer>
+</body>
+
+</html>

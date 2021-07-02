@@ -1,0 +1,317 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(19, 18, 18);
+    color: whitesmoke;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+/*navbar section start from here*/
+
+.nav-bar {
+    border-top: 1px solid rgb(29, 29, 29);
+    border-bottom: 1px solid rgb(26, 25, 25);
+    height: 50px;
+    background-color: rgb(25, 26, 25);
+    position: fixed;
+    font-size: 20px;
+    z-index: 10;
+    padding-left: 20px;
+    margin: -18px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    letter-spacing: 2px;
+    align-items: center;
+}
+
+.nav-bar a {
+    color: whitesmoke;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    margin-right: 30px;
+    padding-top: 5px;
+}
+
+.nav-bar a:hover {
+    color: rgb(201, 19, 19);
+}
+
+
+/*sub-nav content start from here*/
+
+.subnav {
+    float: left;
+    overflow: hidden;
+}
+
+.subnavbtn {
+    border: none;
+    font-size: 16px;
+    outline: none;
+    color: whitesmoke;
+    background-color: inherit;
+    font-family: inherit;
+    margin-right: 30px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.subnavbtn:hover {
+    color: rgb(201, 19, 19);
+    font-weight: 600;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.subnav-content {
+    display: none;
+    position: absolute;
+    left: 792px;
+    width: 100%;
+    z-index: 1;
+    margin-top: 0px;
+}
+
+.subnav-content a {
+    float: left;
+    padding-left: 10px;
+    color: whitesmoke;
+    text-decoration: none;
+    font-size: 16px;
+    width: 120px;
+    background-color: rgb(44, 43, 43);
+    border-radius: 10px;
+    border-top: 2px solid rgb(29, 28, 28);
+}
+
+.subnav-content a:hover {
+    color: rgb(201, 19, 19);
+}
+
+.subnav:hover>.subnav-content {
+    display: flex;
+    flex-direction: column;
+    padding-top: 15px;
+    row-gap: 5px;
+}
+
+
+/*gallery section start from here*/
+
+.gallery-section h1 {
+    background-image: url(/image/image1.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    width: 100%;
+    font-size: 25px;
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    padding-top: 120px;
+    padding-bottom: 30px;
+    text-decoration: overline;
+    text-decoration-color: rgb(201, 19, 19);
+    text-decoration-thickness: 3px;
+}
+
+.gallery-section h3 {
+    font-size: 28px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400;
+    padding-top: 10px;
+    letter-spacing: 1px;
+    margin-left: 105px;
+    margin-bottom: 20px;
+    text-decoration: underline;
+    text-decoration-color: rgb(201, 19, 19);
+    text-decoration-thickness: 3px;
+}
+
+.container {
+    height: 509px;
+    width: 85%;
+    margin: auto;
+    background-color: rgb(34, 31, 31);
+}
+
+.image-section {
+    width: 90%;
+    height: 500px;
+    margin: auto;
+    padding-top: 20px;
+    display: grid;
+}
+
+.inner-div {
+    width: 300px;
+    height: 230px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.one {
+    text-decoration: none;
+    text-align: center;
+    position: relative;
+}
+
+.one img {
+    width: 322px;
+    height: 210px;
+    margin: auto;
+    margin-bottom: -15px;
+}
+
+.one img:hover {
+    width: 345px;
+    height: 225px;
+    transition: all ease-in .1ms;
+}
+
+.one img:hover~.two {
+    font-weight: 500;
+}
+
+.two {
+    position: sticky;
+    font-size: 15px;
+    letter-spacing: 2px;
+    color: whitesmoke;
+    font-weight: 500;
+}
+
+.join-us-section {
+    margin: 80px 0px;
+    background-color: rgb(34, 31, 31);
+    margin-left: 100px;
+    height: 130px;
+    width: 85%;
+    position: relative;
+}
+
+.join-us-section p {
+    height: 80px;
+    padding-top: 35px;
+    padding-left: 20px;
+    font-size: 18px;
+}
+
+.span {
+    margin-top: 10px;
+}
+
+.btn {
+    position: absolute;
+    right: 70px;
+    top: 45px;
+    height: 40px;
+    width: 100px;
+    background-color: rgb(201, 19, 19);
+    border: none;
+    border-radius: 8px;
+}
+
+.btn a {
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: 600;
+    color: rgb(153, 149, 149);
+}
+
+
+/*footer section start from here*/
+
+.footer {
+    margin-top: 100px;
+    height: 19vw;
+}
+
+.contact-section {
+    color: whitesmoke;
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(34, 31, 31);
+    border-top: 1px solid rgb(22, 21, 21);
+    border-bottom: 1px solid rgb(15, 15, 15);
+    column-gap: 8rem;
+    justify-content: center;
+    height: 24vw;
+}
+
+h4 {
+    color: whitesmoke;
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.section-one {
+    margin-top: 50px;
+}
+
+#fit {
+    color: rgb(201, 19, 19);
+}
+
+.section-one p {
+    width: 300px;
+    line-height: 30px;
+}
+
+.section-two {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.section-two a {
+    color: whitesmoke;
+    text-decoration: none;
+    line-height: 30px;
+}
+
+.section-three {
+    margin-top: 50px;
+}
+
+.section-three p,
+.section-four p {
+    line-height: 30px;
+}
+
+.section-four {
+    margin-top: 50px;
+}
+
+.section-four h5 {
+    margin-top: 35px;
+    font-size: 18px;
+    color: whitesmoke;
+    font-weight: 400;
+}
+
+.section-four img {
+    height: 30px;
+    width: 30px;
+    margin-left: 10px;
+    border: none;
+}
+
+.section-four div {
+    margin-left: 10px;
+    margin-top: -15px;
+}
+
+.footer-section h2 {
+    padding-left: 90px;
+    font-size: 14px;
+    color: whitesmoke;
+    font-weight: 300;
+    margin-top: 5px;
+    text-align: center;
+}
